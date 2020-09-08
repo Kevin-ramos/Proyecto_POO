@@ -66,8 +66,10 @@ public class Videojuego{
     public void setExclusividad(String exclusividad) {
         this.exclusividad = exclusividad;
     }
-    public String visualizarJuegos(String vistaJuevo[]){
-        return this.nombre;
+    
+    
+    public void visualizarJuegos(){
+        
     }
     public String venderJuego(String juego){
         return juego;
