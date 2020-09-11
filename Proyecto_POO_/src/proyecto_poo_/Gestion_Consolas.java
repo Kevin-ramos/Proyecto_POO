@@ -33,10 +33,7 @@ public class Gestion_Consolas extends javax.swing.JFrame {
         rbtnPS4 = new javax.swing.JRadioButton();
         rbtnXboxOne = new javax.swing.JRadioButton();
         rbtnNintentoSwitch = new javax.swing.JRadioButton();
-        lblPrecioPS4 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        lblXBoxOne = new javax.swing.JLabel();
-        lblNintentoSwitch = new javax.swing.JLabel();
+        cbmPrecio = new javax.swing.JComboBox<>();
         btnSiguiente = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -60,52 +57,37 @@ public class Gestion_Consolas extends javax.swing.JFrame {
         btgDatosConsola.add(rbtnNintentoSwitch);
         rbtnNintentoSwitch.setText("Nintento Switch");
 
-        lblPrecioPS4.setText("350 $");
-
-        jLabel2.setText("Precio de venta");
-
-        lblXBoxOne.setText("340 $");
-
-        lblNintentoSwitch.setText("320 $");
+        cbmPrecio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Precio", "250 $", "280 $", "300 $", "330 $", "380 $", "410 $", "450 $" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rbtnPS4)
-                    .addComponent(rbtnXboxOne)
-                    .addComponent(rbtnNintentoSwitch))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblPrecioPS4)
-                    .addComponent(lblXBoxOne)
-                    .addComponent(lblNintentoSwitch))
-                .addGap(86, 86, 86))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(58, 58, 58))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rbtnPS4)
+                            .addComponent(rbtnNintentoSwitch))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(rbtnXboxOne)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
+                        .addComponent(cbmPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(49, 49, 49))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rbtnPS4)
-                    .addComponent(lblPrecioPS4))
+                .addGap(27, 27, 27)
+                .addComponent(rbtnPS4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rbtnXboxOne)
-                    .addComponent(lblXBoxOne))
+                    .addComponent(cbmPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rbtnNintentoSwitch)
-                    .addComponent(lblNintentoSwitch))
+                .addComponent(rbtnNintentoSwitch)
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
@@ -123,7 +105,7 @@ public class Gestion_Consolas extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblDato)
                         .addGap(25, 25, 25)))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -134,7 +116,7 @@ public class Gestion_Consolas extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnSiguiente)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         pack();
@@ -182,12 +164,9 @@ public class Gestion_Consolas extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btgDatosConsola;
     private javax.swing.JButton btnSiguiente;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JComboBox<String> cbmPrecio;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblDato;
-    private javax.swing.JLabel lblNintentoSwitch;
-    private javax.swing.JLabel lblPrecioPS4;
-    private javax.swing.JLabel lblXBoxOne;
     private javax.swing.JRadioButton rbtnNintentoSwitch;
     private javax.swing.JRadioButton rbtnPS4;
     private javax.swing.JRadioButton rbtnXboxOne;
