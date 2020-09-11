@@ -67,7 +67,6 @@ public class Videojuego{
         this.exclusividad = exclusividad;
     }
     
-    
     public void visualizarJuegos(){
         
     }
