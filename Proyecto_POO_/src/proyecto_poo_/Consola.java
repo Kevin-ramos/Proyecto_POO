@@ -9,7 +9,7 @@ package proyecto_poo_;
  *
  * @author Pavilion
  */
-public abstract class Consola {
+public class Consola {
     private String compañiaDeFabricacion;
     private String complemento;
     private double precio;

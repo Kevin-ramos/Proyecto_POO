@@ -19,13 +19,13 @@ public class Factura {
     private String numCedula;
     ArrayList <Consola> consola;
     ArrayList <Videojuego> videojuego;
-    ArrayList <Consola> complemento;
+    ArrayList <String> complemento;
     private double valorAPagar;
 
     public Factura() {
     }
 
-    public Factura(int numFactura, String fecha, String nombre, String apellido, String numCedula, ArrayList<Consola> consola, ArrayList<Videojuego> videojuego, ArrayList<Consola> complemento, double valorAPagar) {
+    public Factura(int numFactura, String fecha, String nombre, String apellido, String numCedula, ArrayList<Consola> consola, ArrayList<Videojuego> videojuego, ArrayList<String> complemento, double valorAPagar) {
         this.numFactura = numFactura;
         this.fecha = fecha;
         this.nombre = nombre;
@@ -93,11 +93,11 @@ public class Factura {
         this.videojuego = videojuego;
     }
 
-    public ArrayList<Consola> getComplemento() {
+    public ArrayList<String> getComplemento() {
         return complemento;
     }
 
-    public void setComplemento(ArrayList<Consola> complemento) {
+    public void setComplemento(ArrayList<String> complemento) {
         this.complemento = complemento;
     }
 
@@ -115,14 +115,14 @@ public class Factura {
 
     @Override
     public String toString() {
-        return "Datos de la Factura: " + "\n" + 
+        return "\tDatos de la Factura" + "\n" + 
                "Número de la Factura: " + numFactura + "\n" + 
                "Fecha de facturación: " + fecha + "\n" + 
                "Nombre del Cliente: " + nombre + "\n" + 
                "Apellido del Cliente: " + apellido + "\n" + 
                "Número de Cédula: " + numCedula + "\n" + 
                "Modelo de Consola: " + consola + "\n" + 
-               "Video juego: " + videojuego + "\n" + 
+               "Videojuegos: " + videojuego + "\n" + 
                "Complemento adquirido: " + complemento + "\n" + 
                "Valor a pagar: " + valorAPagar;
     }
